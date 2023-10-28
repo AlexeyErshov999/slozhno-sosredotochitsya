@@ -279,7 +279,7 @@
   line-height: 82.5%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 901px) {
   .header {
     align-self: center;
   }
