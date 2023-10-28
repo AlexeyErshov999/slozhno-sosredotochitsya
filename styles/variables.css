@@ -1,6 +1,8 @@
 :root {
-  --color-red: #ff0070;
-  --color-light: #f1b2ce;
-  --color-dark: #000028;
+  --accent-text: #ff0070;
+  --title-decor: #ff0070;
+  --articles-text: #f1b2ce;
+  --text-dark: #000028;
+  --bg-page: #000028;
   --page-title: #db00ff;
 }

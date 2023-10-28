@@ -4,55 +4,92 @@
   переключая тему
 */
 
-:root.theme-dark {
-  --color-red: #ff0070;
-  --color-light: #f1b2ce;
-  --color-dark: #000028;
+:root .theme-dark {
+  --accent-text: #ff0070;
+  --title-decor: #ff0070;
+  --articles-text: #f1b2ce;
+  --text-dark: #000028;
+  --bg-page: #000028;
   --page-title: #db00ff;
 }
 
-/*.page.theme_dark { 
-}*/
-
-.header__theme-menu-button {
-  color: var(--color-red);
+.page.theme_dark {
+  --accent-text: #ff0070;
+  --title-decor: #ff0070;
+  --articles-text: #f1b2ce;
+  --text-dark: #000028;
+  --bg-page: #000028;
+  --page-title: #db00ff;
+  background-color: var(--bg-page);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.header__theme-menu-button_active {
-  border: 1px solid var(--color-red);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-text: #ff0070;
+    --title-decor: #ff0070;
+    --articles-text: #f1b2ce;
+    --text-dark: #000028;
+    --bg-page: #000028;
+    --page-title: #db00ff;
+  }
 }
 
-.header__title {
+
+.theme_dark .header {
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.theme_dark .rec {
+  color: var(--accent-text);
+}
+
+.theme_dark .title-decor {
+  color: var(--text-dark);
+  background-color: var(--title-decor);
+}
+
+.theme_dark .header__theme-menu-button {
+  color: var(--accent-text);
+}
+
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--title-decor);
+}
+
+.theme_dark .header__title {
   color: var(--page-title);
-  text-shadow: 4px 4px 0px var(--color-red);
+  text-shadow: 4px 4px 0px var(--title-decor);
 }
 
-.header__text {
-  color: var(--color-dark);
-  background-color: var(--color-red);;
+.theme_dark .article-1__title,
+.theme_dark .article-2__title,
+.theme_dark .article-3__title {
+  color: var(--accent-text);
 }
 
-.main-section {
-  background-color: var(--color-dark);
+.theme_dark .article-1__object,
+.theme_dark .article-2__object,
+.theme_dark .article-3__object {
+  color: var(--text-dark);
 }
 
-.article-1__title,
-.article-2__title,
-.article-3__title {
-  color: var(--color-red);
+.theme_dark .article-1__object-text,
+.theme_dark .article-2__object-text,
+.theme_dark .article-3__object-text {
+  color: var(--articles-text);
 }
 
-.article-1__object,
-.article-2__object,
-.article-3__object,
-.article-3__object-action,
-.pictures-section__object {
-  color: var(--color-dark);
-  background-color: var(--color-red);
+.theme_dark .article-3__object-action {
+  color: var(--text-dark);
 }
 
-.article-1__object-text,
-.article-2__object-text,
-.article-3__object-text {
-  color: var(--color-light);
+.theme_dark .footer__title {
+  color: var(--page-title);
+  text-shadow: 2px 2px 0px var(--title-decor);
 }
+
