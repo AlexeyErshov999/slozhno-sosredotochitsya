@@ -5,7 +5,7 @@
 */
 
 :root .theme-light {
-  --accent-text: #353430;;
+  --accent-text: #353430;
   --title-decor: #ff0070;
   --articles-text: #353430;
   --bg-page: #fff1f7;
@@ -14,7 +14,7 @@
 }
 
 .page.theme_light {
-  --accent-text: #353430;;
+  --accent-text: #353430;
   --title-decor: #ff0070;
   --articles-text: #353430;
   --bg-page: #fff1f7;
@@ -27,7 +27,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-text: #353430;;
+    --accent-text: #353430;
     --title-decor: #ff0070;
     --articles-text: #353430;
     --bg-page: #fff1f7;

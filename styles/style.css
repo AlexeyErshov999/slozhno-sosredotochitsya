@@ -16,11 +16,13 @@
   font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-attachment: fixed;
 }
 
 /*НАЧАЛО ШАПКИ------------------------------------*/
 
 .header {
+  block-size: 85vh;
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -102,10 +104,6 @@
   font-size: 18px;
   line-height: 23.4px;
   block-size: 117px;
-}
-
-.header__text {
-  inline-size: clamp(22.188rem, 21.651rem + 2.29vw, 22.75rem);
 }
 
 @media (min-width: 500px) {
@@ -267,6 +265,7 @@
 }
 
 .footer {
+  block-size: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
