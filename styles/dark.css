@@ -49,9 +49,25 @@
   border: 1px solid var(--title-decor);
 }
 
+.theme_dark .header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+.theme_dark .header__theme-menu-button:focus-visible {
+  border-block-end-color: var(--title-decor);
+}
+
 .theme_dark .header__title {
   color: var(--page-title);
   text-shadow: 4px 4px 0px var(--title-decor);
+}
+
+.theme_dark .accent-word {
+  text-shadow: 2px 1px 0px var(--title-decor);
+}
+
+.theme_dark a:hover {
+  text-decoration-color: var(--articles-text);
 }
 
 .theme_dark .article-1__title,
@@ -80,4 +96,6 @@
   color: var(--page-title);
   text-shadow: 2px 2px 0px var(--title-decor);
 }
+
+
 

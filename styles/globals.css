@@ -36,10 +36,16 @@ picture {
 
 button,
 a {
-  display: flex;
+  display: inline-block;
   align-items: center;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }

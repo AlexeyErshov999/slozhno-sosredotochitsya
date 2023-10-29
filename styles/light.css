@@ -56,9 +56,25 @@
   border: 1px solid var(--bg-dark);
 }
 
+.theme_light .header__theme-menu-button:hover {
+  border: 1px solid rgba(50, 49, 45, 0.40);
+}
+
+.theme_light .header__theme-menu-button:focus-visible {
+  border-block-end-color: var(--bg-dark);
+}
+
 .theme_light .header__title {
   color: var(--page-title);
   text-shadow: 4px 4px 0px var(--title-decor);
+}
+
+.theme_light .accent-word {
+  text-shadow: 2px 1px 0px var(--title-decor);
+}
+
+.theme_light a:hover {
+  text-decoration-color: var(--bg-dark);
 }
 
 .theme_light .article-1__title,

@@ -22,13 +22,18 @@
 /*НАЧАЛО ШАПКИ------------------------------------*/
 
 .header {
-  block-size: 85vh;
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: clamp(3.438rem, -4.435rem + 33.59vw, 17.063rem);
-  padding-block-end: clamp(4.125rem, -9.596rem + 32.865vw, 11.438rem);
+  inline-size: 100%;
+  block-size: 100vh;
+}
 
+.accent-word:focus,
+.header__theme-menu-button:focus {
+  border: none;
+  outline: none;
 }
 
 .header, 
@@ -44,8 +49,8 @@
   z-index: 1;
   font-size: 18px;
   line-height: 25px;
-  inset-block-start: 10px;
-  inset-inline-end: 38px;
+  inset-block-start: clamp(0.625rem, 0.264rem + 1.541vw, 1.25rem);
+  inset-inline-end: clamp(0.625rem, 0.264rem + 1.541vw, 1.25rem);
 }
 
 .rec::after {
@@ -65,14 +70,14 @@
 
 .header__theme-menu {
   justify-self: flex-end;
-  margin-block-start: 76.5px;
+  margin-block-start: 62px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 13px;
+  gap: 11px;
 }
 
 .header__theme-menu-button {
@@ -92,6 +97,7 @@
 }
 
 .header__title {
+  margin-block-start: 13px;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
@@ -100,10 +106,11 @@
 .header__text {
   display: flex;
   flex-wrap: nowrap;
+  margin-block-end: 66px;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  block-size: 117px;
+  block-size: fit-content;
 }
 
 @media (min-width: 500px) {
@@ -112,6 +119,7 @@
   }
 
   .header__title {
+    margin-inline-start: -15px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -182,14 +190,6 @@
 }
 
 @media (min-width: 500px) {
-  .header {
-    inline-size: 100%;
-  }
-
-  .header__text {
-    justify-self: flex-end;
-  }
-
   .article-1,
   .article-3 {
     display: flex;
@@ -265,11 +265,11 @@
 }
 
 .footer {
-  block-size: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 667px;
+  block-size: 100vh;
 }
 
 .footer__title {
@@ -278,7 +278,7 @@
   line-height: 82.5%;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 900px) {
   .header {
     align-self: center;
   }
