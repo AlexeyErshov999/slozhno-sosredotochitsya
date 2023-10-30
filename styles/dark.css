@@ -25,6 +25,17 @@
   background-attachment: fixed;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-text: #ff0070;
+    --title-decor: #ff0070;
+    --articles-text: #f1b2ce;
+    --text-dark: #000028;
+    --bg-page: #000028;
+    --page-title: #db00ff;  
+  }
+}
+
 .theme_dark .header {
   background-image: url(../images/cover-image-dark.png);
   background-repeat: no-repeat;
@@ -34,6 +45,16 @@
 
 .theme_dark .rec {
   color: var(--accent-text);
+}
+
+.theme_dark .decorated-zone::before {
+  border-block-start: 1px solid var(--title-decor);
+  border-inline-end: 1px solid var(--title-decor);
+}
+
+.theme_dark  .decorated-zone::after {
+  border-block-end: 1px solid var(--title-decor);
+  border-inline-start: 1px solid var(--title-decor);
 }
 
 .theme_dark .title-decor {

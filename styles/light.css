@@ -6,34 +6,25 @@
 
 :root .theme-light {
   --accent-text: #353430;
-  --title-decor: #ff0070;
+  --title-decor: #ff8dcb;
   --articles-text: #353430;
   --bg-page: #fff1f7;
   --bg-dark: #353430;
   --page-title: #ffc2e6;
+  --title-shadow: #ff0070;
 }
 
 .page.theme_light {
   --accent-text: #353430;
-  --title-decor: #ff0070;
+  --title-decor: #ff8dcb;
   --articles-text: #353430;
   --bg-page: #fff1f7;
   --bg-dark: #353430;
   --page-title: #ffc2e6;
+  --title-shadow: #ff0070;
   background-color: var(--bg-page);
   background-size: cover;
   background-attachment: fixed;  
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --accent-text: #353430;
-    --title-decor: #ff0070;
-    --articles-text: #353430;
-    --bg-page: #fff1f7;
-    --bg-dark: #353430;
-    --page-title: #ffc2e6;
-  }
 }
 
 .theme_light .header {
@@ -43,9 +34,23 @@
   background-size: cover;
 }
 
+.rec {
+  display: none;
+}
+
 .theme_light .title-decor {
   color: var(--accent-text);
   background-color: var(--title-decor);
+}
+
+.theme_light .decorated-zone::before {
+  border-block-start: 1px solid var(--bg-dark);
+  border-inline-end: 1px solid var(--bg-dark);
+}
+
+.theme_light .decorated-zone::after {
+  border-block-end: 1px solid var(--bg-dark);
+  border-inline-start: 1px solid var(--bg-dark);
 }
 
 .theme_light .header__theme-menu-button {
@@ -66,7 +71,7 @@
 
 .theme_light .header__title {
   color: var(--page-title);
-  text-shadow: 4px 4px 0px var(--title-decor);
+  text-shadow: 4px 4px 0px var(--title-shadow);
 }
 
 .theme_light .accent-word {
@@ -101,5 +106,24 @@
 
 .theme_light .footer__title {
   color: var(--page-title);
-  text-shadow: 2px 2px 0px var(--title-decor);
+  text-shadow: 2px 2px 0px var(--title-shadow);
+}
+
+@media (prefers-color-scheme: light) {
+  .rec {
+    display: none;
+  }
+
+  .page {
+    --accent-text: #353430;
+    --title-decor: #ff8dcb;
+    --articles-text: #353430;
+    --bg-page: #fff1f7;
+    --bg-dark: #353430;
+    --page-title: #ffc2e6;
+    --title-shadow: #ff0070;
+    background-color: var(--bg-page);
+    background-size: cover;
+    background-attachment: fixed;  
+  }
 }
