@@ -3,13 +3,12 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
-:root .theme-light {
+:root.theme_light {
   --accent-text: #353430;
   --title-decor: #ff8dcb;
   --articles-text: #353430;
+  --title-decor-text: #353430;
   --bg-page: #fff1f7;
-  --bg-dark: #353430;
   --page-title: #ffc2e6;
   --title-shadow: #ff0070;
 }
@@ -18,13 +17,29 @@
   --accent-text: #353430;
   --title-decor: #ff8dcb;
   --articles-text: #353430;
+  --title-decor-text: #353430;
   --bg-page: #fff1f7;
-  --bg-dark: #353430;
   --page-title: #ffc2e6;
   --title-shadow: #ff0070;
   background-color: var(--bg-page);
   background-size: cover;
   background-attachment: fixed;  
+}
+
+@media (prefers-color-scheme: light) {
+  .rec {
+    display: none;
+  }
+
+  .page {
+    --accent-text: #353430;
+    --title-decor: #ff8dcb;
+    --articles-text: #353430;
+    --title-decor-text: #353430;
+    --bg-page: #fff1f7;
+    --page-title: #ffc2e6;
+    --title-shadow: #ff0070;
+  }
 }
 
 .theme_light .header {
@@ -34,7 +49,7 @@
   background-size: cover;
 }
 
-.rec {
+.theme_light .rec {
   display: none;
 }
 
@@ -44,13 +59,13 @@
 }
 
 .theme_light .decorated-zone::before {
-  border-block-start: 1px solid var(--bg-dark);
-  border-inline-end: 1px solid var(--bg-dark);
+  border-block-start: 1px solid var(--title-decor-text);
+  border-inline-end: 1px solid var(--title-decor-text);
 }
 
 .theme_light .decorated-zone::after {
-  border-block-end: 1px solid var(--bg-dark);
-  border-inline-start: 1px solid var(--bg-dark);
+  border-block-end: 1px solid var(--title-decor-text);
+  border-inline-start: 1px solid var(--title-decor-text);
 }
 
 .theme_light .header__theme-menu-button {
@@ -58,7 +73,7 @@
 }
 
 .theme_light .header__theme-menu-button_active {
-  border: 1px solid var(--bg-dark);
+  border: 1px solid var(--title-decor-text);
 }
 
 .theme_light .header__theme-menu-button:hover {
@@ -66,7 +81,7 @@
 }
 
 .theme_light .header__theme-menu-button:focus-visible {
-  border-block-end-color: var(--bg-dark);
+  border-block-end-color: var(--title-decor-text);
 }
 
 .theme_light .header__title {
@@ -79,7 +94,7 @@
 }
 
 .theme_light a:hover {
-  text-decoration-color: var(--bg-dark);
+  text-decoration-color: var(--title-decor-text);
 }
 
 .theme_light .article-1__title,
@@ -109,21 +124,15 @@
   text-shadow: 2px 2px 0px var(--title-shadow);
 }
 
-@media (prefers-color-scheme: light) {
-  .rec {
-    display: none;
-  }
+:focus {
+  outline: none;
+}
 
-  .page {
-    --accent-text: #353430;
-    --title-decor: #ff8dcb;
-    --articles-text: #353430;
-    --bg-page: #fff1f7;
-    --bg-dark: #353430;
-    --page-title: #ffc2e6;
-    --title-shadow: #ff0070;
-    background-color: var(--bg-page);
-    background-size: cover;
-    background-attachment: fixed;  
-  }
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: var(--title-decor-text);
+  outline: none;
+}
+
+.accent-word:focus-visible {
+  outline: 1px solid var(--title-decor-text);
 }
