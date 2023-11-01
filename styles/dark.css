@@ -46,12 +46,9 @@
     border-inline-end: 1px solid var(--title-decor);
     border-block-start: 1px solid var(--title-decor);
   }
-  
+
   .decorated-zone::after {
     border-inline-start: 1px solid var(--title-decor);
     border-block-end: 1px solid var(--title-decor);
   }
 }
-
-
-

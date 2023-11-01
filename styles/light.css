@@ -23,7 +23,7 @@
   --title-shadow: #ff0070;
   background-color: var(--bg-page);
   background-size: cover;
-  background-attachment: fixed;  
+  background-attachment: fixed;
 }
 
 .theme_light .header {
@@ -61,7 +61,7 @@
 }
 
 .theme_light .header__theme-menu-button:hover {
-  border: 1px solid rgba(50, 49, 45, 0.40);
+  border: 1px solid rgba(50, 49, 45, 0.4);
 }
 
 .theme_light .header__theme-menu-button:focus-visible {
@@ -143,11 +143,15 @@
     background-image: url(../images/cover-image-light.png);
   }
 
+  .header__title {
+    text-shadow: 4px 4px 0px var(--title-shadow);
+  }
+
   .decorated-zone::before {
     border-inline-end: 1px solid var(--title-decor-text);
     border-block-start: 1px solid var(--title-decor-text);
   }
-  
+
   .decorated-zone::after {
     border-inline-start: 1px solid var(--title-decor-text);
     border-block-end: 1px solid var(--title-decor-text);
