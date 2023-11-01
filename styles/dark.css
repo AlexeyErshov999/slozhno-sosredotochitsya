@@ -37,6 +37,20 @@
     background-size: cover;
     background-attachment: fixed;
   }
+
+  .header {
+    background-image: url(../images/cover-image-dark.png);
+  }
+
+  .decorated-zone::before {
+    border-inline-end: 1px solid var(--title-decor);
+    border-block-start: 1px solid var(--title-decor);
+  }
+  
+  .decorated-zone::after {
+    border-inline-start: 1px solid var(--title-decor);
+    border-block-end: 1px solid var(--title-decor);
+  }
 }
 
 

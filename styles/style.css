@@ -37,23 +37,23 @@
 
 .header::before {
   content: '';
+  position: absolute;
+  margin-inline-start: auto;
   inset-inline-end: 10px;
   inset-block-start: 10px;
   inline-size: 25px;
   block-size: 25px;
-  position: absolute;
-  margin-inline-start: auto;
 }
 
 .header::after {
   content: '';
+  position: absolute;
+  display: block;
+  margin-inline-end: auto;
   inset-inline-start: 10px;
   inset-block-end: 10px;
   inline-size: 25px;
   block-size: 25px;
-  position: absolute;
-  margin-inline-end: auto;
-  display: block;
 }
 
 .header, 
@@ -80,8 +80,8 @@
   }
 
   .header__title {
-    font-size: clamp(7.25rem, 6.5rem + 1.563vw, 7.5rem);
     margin-block-end: clamp(3.438rem, -2.884rem + 26.972vw, 10.063rem);
+    font-size: clamp(7.25rem, 6.5rem + 1.563vw, 7.5rem);
   }
 
   .header__text {
@@ -91,6 +91,12 @@
   .header__text {
     inline-size: clamp(22.188rem, 21.651rem + 2.29vw, 22.75rem);
     block-size: fit-content;
+  }
+
+  .card-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -184,8 +190,8 @@
   }
 
   .footer__title {
-  font-size: 157px;
   font-weight: 700;
+  font-size: 157px;
   line-height: 82.5%;
   }
 }
@@ -319,10 +325,10 @@
 }
 
 .article-4__content-picture {
+  flex-shrink: 0;
   width: 100%;
   max-height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
 }
 
 @media (min-width: 500px) {
@@ -365,36 +371,36 @@
 }
 
 .footer {
-  padding: 10px;
   display: grid;
   grid-template-rows: repeat(auto-fit, auto);
-  min-height: 667px;
-  block-size: 100vh;
   align-content: space-between;
+  min-height: 667px;
+  padding: 10px;
+  block-size: 100vh;
 }
 
 .footer::before {
   content: '';
-  inline-size: 25px;
-  block-size: 25px;
   position: relative;
   display: block;
   justify-self: flex-end;
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 .footer::after {
   content: '';
-  inline-size: 25px;
-  block-size: 25px;
   position: relative;
   display: block;
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 .footer__title {
+  justify-self: center;
   font-weight: 700;
   font-size: 116px;
   line-height: 82.5%;
-  justify-self: center;
 }
 
 @media (min-width: 900px) {
@@ -436,13 +442,13 @@
 }
 
 .decorated-zone::before {
-  border-block-start: 1px solid var(--title-decor);
   border-inline-end: 1px solid var(--title-decor);
+  border-block-start: 1px solid var(--title-decor);
 }
 
 .decorated-zone::after {
-  border-block-end: 1px solid var(--title-decor);
   border-inline-start: 1px solid var(--title-decor);
+  border-block-end: 1px solid var(--title-decor);
 }
 
 .title-decor {
