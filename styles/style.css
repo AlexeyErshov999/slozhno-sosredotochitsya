@@ -93,9 +93,29 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  .footer__title {
+    font-size: 116px;
+  }
 }
 
 @media (width = 768px) {
+  .page {
+    gap: 40px;
+  }
+
+  .article-2 {
+    margin-block-start: 10px;
+  }
+
+  .article-3 {
+    margin-block-start: 10px;
+  }
+
+  .article-4 {
+    margin-block-start: 10px;
+  }
+
   .header__title {
     margin-inline-start: -20px;
     font-size: 120px;
@@ -111,6 +131,10 @@
 
   .article-2__title {
     inline-size: min-content;
+  }
+
+  .footer__title {
+    font-size: 120px;
   }
 }
 
@@ -165,9 +189,19 @@
 }
 
 @media (width = 1024px) {
+  .page {
+    gap: 40px;
+  }
+
   .header__title {
     margin-inline-start: -20px;
     margin-block-start: 25px;
+  }
+
+  .article-2,
+  .article-3,
+  .article-4 {
+    margin-block-start: 10px;
   }
 
   .article-1,
@@ -178,6 +212,12 @@
 
   .card {
     inline-size: 648.918px;
+  }
+
+  .card-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .article-2__title {
@@ -398,7 +438,6 @@
 .footer__title {
   justify-self: center;
   font-weight: 700;
-  font-size: 116px;
   line-height: 82.5%;
 }
 
