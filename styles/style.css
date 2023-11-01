@@ -182,6 +182,12 @@
   .article-3__title {
     flex-grow: 1;
   }
+
+  .footer__title {
+  font-size: 157px;
+  font-weight: 700;
+  line-height: 82.5%;
+  }
 }
 
 .header__theme-menu {
@@ -416,6 +422,101 @@
   .article-4__content {
     grid-template-rows: 260px 315px 428px;
   }
+}
+
+.header {
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.rec {
+  color: var(--accent-text);
+}
+
+.decorated-zone::before {
+  border-block-start: 1px solid var(--title-decor);
+  border-inline-end: 1px solid var(--title-decor);
+}
+
+.decorated-zone::after {
+  border-block-end: 1px solid var(--title-decor);
+  border-inline-start: 1px solid var(--title-decor);
+}
+
+.title-decor {
+  color: var(--title-decor-text);
+  background-color: var(--title-decor);
+}
+
+.header__theme-menu-button {
+  color: var(--accent-text);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--title-decor);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: var(--title-decor);
+}
+
+.header__title {
+  color: var(--page-title);
+  text-shadow: 4px 4px 0px var(--title-decor);
+}
+
+.accent-word {
+  text-shadow: 2px 1px 0px var(--title-decor);
+}
+
+a:hover {
+  text-decoration-color: var(--articles-text);
+}
+
+.article-1__title,
+.article-2__title,
+.article-3__title {
+  color: var(--accent-text);
+}
+
+.article-1__object,
+.article-2__object,
+.article-3__object {
+  color: var(--title-decor-text);
+}
+
+.article-1__object-text,
+.article-2__object-text,
+.article-3__object-text {
+  color: var(--articles-text);
+}
+
+.article-3__object-action {
+  color: var(--title-decor-text);
+}
+
+.footer__title {
+  color: var(--page-title);
+  text-shadow: 2px 2px 0px var(--title-decor);
+}
+
+:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: var(--articles-text);
+  outline: none;
+}
+
+.accent-word:focus-visible {
+  outline: 1px solid var(--articles-text);
 }
 
 
