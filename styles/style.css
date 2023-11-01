@@ -12,7 +12,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -31,6 +31,8 @@
 
 .rec {
   position: absolute;
+  width: 100%;
+  height: auto;
   inset-block-start: 10px;
   inset-inline-end: 38px;
 }
@@ -62,11 +64,6 @@
 .article-3,
 .article-4 {
   padding: clamp(0.625rem, -0.003rem + 2.611vw, 1.25rem);
-}
-
-.rec {
-  width: 100%;
-  height: auto;
 }
 
 @media (width >= 375px) and (width <=768px) {
@@ -250,7 +247,7 @@
 .main-section {
   display: grid;
   grid-template-rows: repeat(auto-fit, fit-content);
-  gap: 50px;
+  gap: 30px;
 }
 
 
@@ -380,7 +377,6 @@
   display: grid;
   grid-template-rows: repeat(auto-fit, auto);
   align-content: space-between;
-  min-height: 667px;
   padding: 10px;
   block-size: 100vh;
 }
