@@ -75,7 +75,7 @@
   }
 
   .header__theme-menu {
-    margin-block-start: clamp(2.375rem, -4.036rem + 27.354vw, 9.094rem);
+    margin-block-start: clamp(3.875rem, 0.416rem + 14.758vw, 7.5rem);
     margin-block-end: clamp(4.125rem, -2.346rem + 27.608vw, 10.906rem);
   }
 
@@ -103,6 +103,11 @@
 @media (width = 768px) {
   .header__title {
     margin-inline-start: -20px;
+    font-size: 120px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 170px;
   }
 
   .card {
@@ -167,6 +172,7 @@
 @media (width = 1024px) {
   .header__title {
     margin-inline-start: -20px;
+    margin-block-start: 25px;
   }
 
   .article-1,
