@@ -108,13 +108,9 @@
   text-shadow: 2px 2px 0px var(--title-shadow);
 }
 
-:focus {
-  outline: none;
-}
-
 .header__theme-menu-button:focus-visible {
-  border-block-end-color: var(--title-decor-text);
   outline: none;
+  border-block-end-color: var(--title-decor-text);
 }
 
 .accent-word:focus-visible {
@@ -155,5 +151,13 @@
   .decorated-zone::after {
     border-inline-start: 1px solid var(--title-decor-text);
     border-block-end: 1px solid var(--title-decor-text);
+  }
+
+  .footer__title {
+    text-shadow: 2px 2px 0px var(--title-shadow);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--title-decor-text);
   }
 }
