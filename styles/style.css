@@ -1,10 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-/*
-  1) СДЕЛАТЬ REC ПСЕВДОЭЛЕМЕНТОМ И ТРЕУГОЛЬНИЧКИ
-  2) ПРОВЕРИТЬ ВСЕ РАССТОЯНИЯ И ОТСУПЫ
-  3) 
-*/
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -26,6 +21,13 @@
   inline-size: 100%;
   block-size: 100vh;
   min-height: 668px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.theme_dark .header {
+  background-image: url(../images/cover-image-dark.png);
 }
 
 .rec {
@@ -506,13 +508,6 @@
   .article-4__content {
     grid-template-rows: 260px 315px 428px;
   }
-}
-
-.header {
-  background-image: url(../images/cover-image-dark.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .rec {

@@ -10,7 +10,8 @@
   --title-decor-text: #353430;
   --bg-page: #fff1f7;
   --page-title: #ffc2e6;
-  --title-shadow: #ff0070;
+  --title-shadow: #ff8dcb;
+  --title-shadow-desktop: #ff0070;
 }
 
 .page.theme_light {
@@ -20,7 +21,8 @@
   --title-decor-text: #353430;
   --bg-page: #fff1f7;
   --page-title: #ffc2e6;
-  --title-shadow: #ff0070;
+  --title-shadow: #ff8dcb;
+  --title-shadow-desktop: #ff0070;
   background-color: var(--bg-page);
   background-size: cover;
   background-attachment: fixed;
@@ -68,9 +70,10 @@
   border-block-end-color: var(--title-decor-text);
 }
 
-.theme_light .header__title {
+.theme_light .header__title,
+.theme_auto .header__title {
   color: var(--page-title);
-  text-shadow: 4px 4px 0px var(--title-shadow);
+  text-shadow: 4px 4px 0px var(--title-decor);
 }
 
 .theme_light .accent-word {
@@ -103,9 +106,10 @@
   color: var(--accent-text);
 }
 
-.theme_light .footer__title {
+.theme_light .footer__title,
+.theme_auto .footer__title {
   color: var(--page-title);
-  text-shadow: 2px 2px 0px var(--title-shadow);
+  text-shadow: 2px 2px 0px var(--title-decor);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -118,7 +122,8 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .rec {
+  .theme_light .rec,
+  .theme_auto .rec {
     display: none;
   }
 
@@ -143,12 +148,14 @@
     text-shadow: 4px 4px 0px var(--title-shadow);
   }
 
-  .decorated-zone::before {
+  .theme_light .decorated-zone::before,
+  .theme_auto .decorated-zone::before {
     border-inline-end: 1px solid var(--title-decor-text);
     border-block-start: 1px solid var(--title-decor-text);
   }
 
-  .decorated-zone::after {
+  .theme_light .decorated-zone::after,
+  .theme_auto .decorated-zone::after {
     border-inline-start: 1px solid var(--title-decor-text);
     border-block-end: 1px solid var(--title-decor-text);
   }
@@ -160,4 +167,16 @@
   .header__theme-menu-button_active {
     border: 1px solid var(--title-decor-text);
   }
+}
+
+@media (min-width: 900px) {
+  .theme_light .header__title,
+  .theme_auto .header__title {
+    text-shadow: 4px 4px 0px var(--title-shadow-desktop);
+  }
+
+  .theme_light .footer__title,
+  .theme_auto .footer__title {
+    text-shadow: 2px 2px 0px var(--title-shadow-desktop);
+}
 }
