@@ -45,13 +45,3 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-button:focus {
-  border: none;
-  outline: none;
-}

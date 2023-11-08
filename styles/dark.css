@@ -41,4 +41,26 @@
   .header {
     background-image: url(../images/cover-image-dark.png);
   }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(255, 0, 112, 0.40);
+  }
+
+  .header__title {
+    color: var(--page-title);
+    text-shadow: 4px 4px 0px var(--title-decor);
+  }
+
+  button:focus-visible {
+    border-block-end: 1px solid var(--title-decor);
+    outline: none;
+  }
+
+  .accent-word:hover {
+    border-block-end: 2px solid var(--articles-text);
+  }
+
+  .accent-word:focus-visible {
+    outline: 1px solid var(--articles-text);
+  }
 }
